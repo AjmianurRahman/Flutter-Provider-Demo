@@ -16,12 +16,12 @@ class _CountExscreenState extends State<CountExscreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Count Page'),
+        title: const Text('Count Page'),
         centerTitle: true,
       ),
       body: Center(
           child: Consumer<CountProvider>(builder: (context, value, child) {
-        return Text(value.count.toString());
+        return Text(value.count.toString(), style: const TextStyle(fontSize: 50));
       })),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
